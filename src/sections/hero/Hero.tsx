@@ -6,7 +6,7 @@ import { FaArrowRight, FaGithub, FaDownload } from "react-icons/fa6";
 
 export function Hero() {
     return (
-        <section className="flex min-h-screen items-center py-20 lg:py-24">
+        <section className="flex min-h-screen items-center py-20 lg:py-16">
             <div className="grid w-full items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
                 <div className="space-y-7">
                     <p className="text-base font-semibold uppercase tracking-[0.22em] text-blue-400">
