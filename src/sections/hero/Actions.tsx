@@ -11,13 +11,14 @@ export function Actions({ label, icon: Icon, action }: Props) {
         <button
             onClick={action}
             className="
+            cursor-pointer
             inline-flex items-center justify-center gap-2
             rounded-md border border-zinc-700
-            bg-zinc-900 px-5 py-3
+            px-5 py-3
             text-sm font-medium text-zinc-200
             transition
-            hover:border-blue-500
-            hover:bg-zinc-800
+            hover:border-blue-600
+            hover:backdrop-blur-xs
             hover:text-white
             focus-visible:outline-none
             focus-visible:ring-2
