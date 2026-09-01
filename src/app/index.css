@@ -6,3 +6,8 @@
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* h-16 = 64px, altura del header sticky */
+}

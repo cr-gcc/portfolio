@@ -9,7 +9,7 @@ export function Footer() {
 
     return (
         <footer className="border-t border-zinc-200/10 backdrop-blur-xl">
-            <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+            <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:pt-12">
                 {/* Back to top */}
                 <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
                     <button
