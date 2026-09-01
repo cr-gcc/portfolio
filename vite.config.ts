@@ -12,6 +12,7 @@ export default defineConfig({
             "@sections": path.resolve(import.meta.dirname, "./src/sections"),
             "@pages": path.resolve(import.meta.dirname, "./src/pages"),
             "@layouts": path.resolve(import.meta.dirname, "./src/layouts"),
+            "@data": path.resolve(import.meta.dirname, "./src/data"),
             "@components": path.resolve(import.meta.dirname, "./src/components"),
         },
     },
