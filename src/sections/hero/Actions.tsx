@@ -1,10 +1,12 @@
+import type { IconType } from "react-icons";
+
 interface Props {
-    label: string
-    icon: string
-    action: () => void
+    label: string;
+    icon: IconType;
+    action: () => void;
 }
 
-export function Actions({ label, icon, action }: Props) {
+export function Actions({ label, icon: Icon, action }: Props) {
     return (
         <button
             onClick={action}
@@ -24,7 +26,7 @@ export function Actions({ label, icon, action }: Props) {
             focus-visible:ring-offset-zinc-950"
         >
             <span>{label}</span>
-            <i className={icon} />
+            <Icon className="h-4 w-4" />
         </button>
     );
 }
