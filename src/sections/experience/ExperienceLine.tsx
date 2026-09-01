@@ -20,7 +20,7 @@ export function ExperienceLine({ experiences, className }: ExperienceLineProps) 
         >
             {experiences.map((experience, index) => (
                 <li
-                    key={index}
+                    key={`${experience.company}-${experience.rangeDate}`}
                     className="group relative grid grid-cols-2 odd:-me-3 even:-ms-3"
                 >
                     <div className="relative flex items-start gap-5 group-odd:flex-row-reverse group-odd:text-right group-even:order-last">

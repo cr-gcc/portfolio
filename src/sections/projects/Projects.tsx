@@ -4,7 +4,7 @@ import { ProjectCard } from "./ProjectCard"
 
 export function Projects() {
     return (
-        <div className="w-full border-t border-zinc-200/10">
+        <div id="projects" className="w-full border-t border-zinc-200/10">
             <section className="py-10">
                 <div className="mb-4 flex justify-between">
                     <span className="text-base font-semibold uppercase text-blue-400">

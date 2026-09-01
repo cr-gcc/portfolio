@@ -16,6 +16,7 @@ const iconMap: Record<IconType, ReactIconType> = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+    const Icon = iconMap[project.icon];
     return (
         <article
             className="
@@ -38,7 +39,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 {project.typeProject}
             </span>
             <div className="mb-3 flex items-center gap-3">
-                {(() => { const Icon = iconMap[project.icon]; return <Icon className="block text-blue-400" size={22} />; })()}
+                <Icon className="block text-blue-400" size={22} />
                 <h3 className="text-xl font-semibold tracking-tight text-zinc-100">
                     {project.name}
                 </h3>

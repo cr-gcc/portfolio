@@ -6,7 +6,7 @@ export function Experience() {
     const partTimeExperiences = experiences.filter((experience) => experience.type === "Part-time");
 
     return (
-        <div className="w-full border-t border-zinc-200/10">
+        <div id="experience" className="w-full border-t border-zinc-200/10">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10">
                 <div className="px-4">
                     <span className="text-base font-semibold uppercase text-blue-400 pb-4">
