@@ -1,6 +1,7 @@
 export function ProfileTerminal() {
     return (
         <div className="
+            font-mono
             overflow-hidden
             rounded-xl
             border border-blue-500/20
@@ -24,7 +25,7 @@ export function ProfileTerminal() {
                     <div className="text-zinc-400">location:</div>
                     <div className="text-zinc-300">Mexico City, Mexico</div>
                     <div className="text-zinc-400">focus:</div>
-                    <div className="text-zinc-300">Web Application, APIs, Integrations & Data</div>
+                    <div className="text-zinc-300">Web Applications, APIs, Integrations & Data</div>
                     <div className="text-zinc-400">experiences:</div>
                     <div className="text-zinc-300">7+ Years</div>
                     <div className="text-zinc-400">available:</div>
