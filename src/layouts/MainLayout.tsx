@@ -4,7 +4,7 @@ import { Footer } from "@components/Footer"
 
 export function MainLayout() {
     return (
-        <div className="relative min-h-screen overflow-hidden bg-[#060b18] text-zinc-100">
+        <div className="relative min-h-screen overflow-x-clip bg-[#060b18] text-zinc-100">
             {/* Fondo de Lineas */}
             <div className="
                 pointer-events-none
@@ -38,7 +38,7 @@ export function MainLayout() {
                 blur-[150px]"/>
             {/* Contenido principal */}
             <Header />
-            <main id="main" className="font-sans relative z-10 min-h-screen">
+            <main id="main" className="font-sans relative z-10">
                 <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
                     <Outlet />
                 </div>

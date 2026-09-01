@@ -5,11 +5,11 @@ import { TechStack } from "@sections/stack/TechStack";
 
 export function HomePage() {
     return (
-        <>
+        <div id="home">
             <Hero />
             <Projects />
             <Experience />
             <TechStack />
-        </>
+        </div>
     );
 }
