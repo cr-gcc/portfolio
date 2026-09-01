@@ -1,4 +1,6 @@
 import { Outlet } from 'react-router'
+import { Header } from "@components/Header"
+import { Footer } from "@components/Footer"
 
 export function MainLayout() {
     return (
@@ -35,12 +37,13 @@ export function MainLayout() {
                 bg-sky-500/10
                 blur-[150px]"/>
             {/* Contenido principal */}
+            <Header />
             <main id="main" className="font-sans relative z-10 min-h-screen">
                 <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
                     <Outlet />
                 </div>
             </main>
-
+            <Footer />
         </div>
     );
 }
