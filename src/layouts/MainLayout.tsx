@@ -4,7 +4,7 @@ import { Footer } from "@components/Footer"
 
 export function MainLayout() {
     return (
-        <div className="relative min-h-screen overflow-x-clip bg-[#060b18] text-zinc-100">
+        <div className="relative min-h-screen overflow-clip bg-[#060b18] text-zinc-100">
             {/* Fondo de Lineas */}
             <div className="
                 pointer-events-none
