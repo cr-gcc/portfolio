@@ -9,7 +9,7 @@ export function Footer() {
 
     return (
         <footer className="border-t border-zinc-200/10 backdrop-blur-xl">
-            <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:pt-12">
+            <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-20 sm:px-6 sm:pt-16 lg:px-8 lg:pt-12">
                 {/* Back to top */}
                 <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
                     <button
@@ -37,7 +37,7 @@ export function Footer() {
                     </button>
                 </div>
                 {/* Main footer content */}
-                <div className="mb-12 grid gap-4 lg:grid-cols-[1fr_0.8fr] lg:items-start">
+                <div className="mb-10 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-start">
                     {/* Left */}
                     <div>
                         <div className="flex justify-center lg:justify-start">
@@ -116,7 +116,7 @@ export function Footer() {
                 </div>
                 {/* Bottom */}
                 <div>
-                    <p className="text-center text-base text-zinc-500 lg:text-right">
+                    <p className="text-center text-sm leading-6 text-zinc-500 lg:text-right lg:text-base">
                         © {new Date().getFullYear()}{" "}
                         <span className="font-medium text-zinc-300">
                             Cris GC
