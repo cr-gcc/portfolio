@@ -3,7 +3,7 @@ import { TechItem } from "./TechItem";
 
 export function TechStack() {
     return (
-        <section id="stack" className="border-t border-zinc-200/10 py-12 sm:py-16 lg:py-20">
+        <section id="stack" className="scroll-mt-20 md:scroll-mt-16 border-t border-zinc-200/10 py-12 sm:py-16 lg:py-20">
             <header className="mb-10">
                 <span className="text-base font-semibold uppercase text-blue-400 pb-4">
                     Tech Stack
