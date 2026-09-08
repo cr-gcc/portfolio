@@ -20,7 +20,7 @@ export function ExperienceLine({ experiences, className }: ExperienceLineProps) 
                 ${className ?? ""}
             `}
         >
-            {experiences.map((experience) => (
+            {experiences?.map((experience) => (
                 <li
                     key={`${experience.company}-${experience.rangeDate}`}
                     className="group relative pl-8 md:grid md:grid-cols-2 md:pl-0 md:odd:-me-3 md:even:-ms-3"
