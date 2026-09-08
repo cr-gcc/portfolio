@@ -7,21 +7,21 @@ import { FaArrowRight, FaGithub, FaDownload } from "react-icons/fa6";
 export function Hero() {
     return (
         <section className="flex min-h-screen items-center py-20 lg:py-16">
-            <div className="grid w-full items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="space-y-7">
-                    <p className="text-base font-semibold uppercase tracking-[0.22em] text-blue-400">
+            <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+                <div className="space-y-5 sm:space-y-7">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-400 sm:text-base sm:tracking-[0.22em]">
                         Full Stack Developer
                     </p>
-                    <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-zinc-50 sm:text-5xl lg:text-6xl">
+                    <h1 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-zinc-50 sm:text-4xl md:text-5xl lg:text-6xl">
                         I build web applications, APIs and business-oriented software.
                     </h1>
-                    <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
+                    <p className="max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7 md:text-lg">
                         Transforming business needs into scalable solutions.
                         Specialized in building full-stack applications,
                         integrations and data-driven systems.
                     </p>
                     <TechBadges />
-                    <div className="flex flex-wrap gap-3 pt-2">
+                    <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
                         <Actions
                             label="View projects"
                             icon={FaArrowRight}
@@ -40,7 +40,7 @@ export function Hero() {
                     </div>
                 </div>
 
-                <div className="lg:pl-8">
+                <div className="w-full lg:pl-8">
                     <ProfileTerminal />
                 </div>
             </div>

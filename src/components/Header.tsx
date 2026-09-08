@@ -9,8 +9,8 @@ export function Header() {
         { label: "Stack", href: "#stack" }
     ];
     return (
-        <header className="sticky top-0 z-50 backdrop-blur-xl border-b border-zinc-200/10">
-            <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+        <header className="sticky top-0 z-50 border-b border-zinc-200/10 bg-[#060b18]/80 backdrop-blur-xl">
+            <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
                 <a className="block text-teal-600" href="#">
                     <span className="sr-only">Home</span>
                     <RiCodeSSlashLine
