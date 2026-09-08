@@ -4,39 +4,30 @@ export function ExperienceLine({ experiences, className }: ExperienceLineProps) 
     return (
         <ol
             className={`
-                relative space-y-10
+                relative space-y-8
                 before:absolute
                 before:top-0
-                before:left-1/2
+                before:left-2
                 before:h-full
                 before:w-px
-                before:-translate-x-1/2
                 before:bg-gradient-to-b
                 before:from-blue-500/10
                 before:via-blue-400/50
                 before:to-blue-500/10
+                md:space-y-10
+                md:before:left-1/2
+                md:before:-translate-x-1/2
                 ${className ?? ""}
             `}
         >
-            {experiences.map((experience, index) => (
+            {experiences.map((experience) => (
                 <li
                     key={`${experience.company}-${experience.rangeDate}`}
-                    className="group relative grid grid-cols-2 odd:-me-3 even:-ms-3"
+                    className="group relative pl-8 md:grid md:grid-cols-2 md:pl-0 md:odd:-me-3 md:even:-ms-3"
                 >
-                    <div className="relative flex items-start gap-5 group-odd:flex-row-reverse group-odd:text-right group-even:order-last">
+                    <div className="relative flex items-start gap-4 md:gap-5 md:group-odd:flex-row-reverse md:group-odd:text-right md:group-even:order-last">
                         {/* Timeline point */}
-                        <span className="
-                            relative z-10 mt-1
-                            size-3 shrink-0
-                            rounded-full
-                            border-2 border-blue-300
-                            bg-blue-500
-                            shadow-[0_0_0_5px_rgba(59,130,246,0.10),0_0_18px_rgba(59,130,246,0.65)]
-                            transition
-                            duration-300
-                            group-hover:scale-125
-                            group-hover:bg-blue-300
-                        "/>
+                        <span className="absolute -left-[30px] top-1 z-10 size-3 shrink-0 rounded-full border-2 border-blue-300 bg-blue-500 shadow-[0_0_0_5px_rgba(59,130,246,0.10),0_0_18px_rgba(59,130,246,0.65)] md:static md:mt-1" />
                         {/* Content */}
                         <div className="
                             -mt-3
