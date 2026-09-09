@@ -11,9 +11,9 @@ export function ExperienceLine({ experiences, className }: ExperienceLineProps) 
                 before:h-full
                 before:w-px
                 before:bg-gradient-to-b
-                before:from-blue-500/10
-                before:via-blue-400/50
-                before:to-blue-500/10
+                before:from-accent-soft
+                before:via-accent-soft
+                before:to-accent-soft
                 md:space-y-10
                 md:before:left-1/2
                 md:before:-translate-x-1/2
@@ -27,34 +27,34 @@ export function ExperienceLine({ experiences, className }: ExperienceLineProps) 
                 >
                     <div className="relative flex items-start gap-4 md:gap-5 md:group-odd:flex-row-reverse md:group-odd:text-right md:group-even:order-last">
                         {/* Timeline point */}
-                        <span className="absolute -left-[30px] top-1 z-10 size-3 shrink-0 rounded-full border-2 border-blue-300 bg-blue-500 shadow-[0_0_0_5px_rgba(59,130,246,0.10),0_0_18px_rgba(59,130,246,0.65)] md:static md:mt-1" />
+                        <span className="absolute -left-[30px] top-1 z-10 size-3 shrink-0 rounded-full border-2 border-border bg-accent-soft shadow-accent-soft md:static md:mt-1" />
                         {/* Content */}
                         <div className="
                             -mt-3
                             max-w-xl
                             rounded-xl
-                            border border-blue-500/10
-                            bg-zinc-950/35
+                            border border-border
+                            bg-surface-soft
                             px-5 py-4
                             backdrop-blur-sm
                             transition
                             duration-300
-                            group-hover:border-blue-400/25
-                            group-hover:bg-blue-950/10
+                            group-hover:border-border
+                            group-hover:bg-accent-soft
                         ">
                             <time className="
                                 inline-flex
                                 rounded-md
-                                border border-blue-500/15
-                                bg-blue-500/10
+                                border border-border
+                                bg-accent-soft
                                 px-2.5 py-1
                                 text-xs font-semibold
                                 tracking-wide
-                                text-blue-300
+                                text-accent
                             ">{experience.rangeDate}</time>
-                            <h3 className="mt-3 text-lg font-semibold text-zinc-100">{experience.role}</h3>
-                            <p className="mt-1 text-sm font-medium text-blue-400">{experience.company}</p>
-                            <p className="mt-3 text-sm leading-6 text-zinc-400">{experience.description}</p>
+                            <h3 className="mt-3 text-lg font-semibold text-text-primary">{experience.role}</h3>
+                            <p className="mt-1 text-sm font-medium text-accent">{experience.company}</p>
+                            <p className="mt-3 text-sm leading-6 text-text-secondary">{experience.description}</p>
                         </div>
                     </div>
                     <div aria-hidden="true" />

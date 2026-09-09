@@ -23,28 +23,28 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 group
                 flex h-full flex-col
                 rounded-xl
-                border border-blue-500/15
-                bg-zinc-950/45
+                border border-border
+                bg-surface-soft
                 p-6
                 backdrop-blur-md
                 transition
                 duration-300
                 hover:-translate-y-1
-                hover:border-blue-400/30
-                hover:bg-zinc-900/60
+                hover:border-border
+                hover:bg-surface-soft
                 hover:shadow-2xl
                 hover:shadow-blue-950/20"
         >
-            <span className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">
+            <span className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
                 {project.typeProject}
             </span>
             <div className="mb-3 flex items-center gap-3">
-                <Icon className="block text-blue-400" size={22} />
-                <h3 className="text-xl font-semibold tracking-tight text-zinc-100">
+                <Icon className="block text-accent" size={22} />
+                <h3 className="text-xl font-semibold tracking-tight text-text-primary">
                     {project.name}
                 </h3>
             </div>
-            <p className="mt-3 flex-1 text-sm leading-6 text-zinc-400">
+            <p className="mt-3 flex-1 text-sm leading-6 text-text-secondary">
                 {project.description}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
@@ -53,23 +53,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
                         key={technology}
                         className="
                                 rounded-md
-                                border border-zinc-800
-                                bg-zinc-900/70
+                                border border-border
+                                bg-surface-soft
                                 px-2.5 py-1
                                 text-xs font-medium
-                                text-zinc-400"
+                                text-text-secondary"
                     >
                         {technology}
                     </span>
                 ))}
             </div>
 
-            <div className="mt-6 flex items-center gap-4 border-t border-zinc-800/80 pt-5">
+            <div className="mt-6 flex items-center gap-4 border-t border-border pt-5">
                 <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium text-zinc-300 transition hover:text-blue-400"
+                    className="text-sm font-medium text-text-secondary transition hover:text-accent"
                 >
                     GitHub ↗
                 </a>
@@ -79,7 +79,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                         href={project.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-sm font-medium text-zinc-300 transition hover:text-blue-400">
+                        className="text-sm font-medium text-text-secondary transition hover:text-accent">
                         Live Demo ↗
                     </a>
                 )}

@@ -6,17 +6,17 @@ export function Experience() {
     const partTimeExperiences = experiences.filter((experience) => experience.type === "Part-time");
 
     return (
-        <div id="experience" className="scroll-mt-20 md:scroll-mt-16 w-full border-t border-zinc-200/10">
+        <div id="experience" className="scroll-mt-20 md:scroll-mt-16 w-full border-t border-border">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10">
                 <div className="px-4">
-                    <span className="text-base font-semibold uppercase text-blue-400 pb-4">
+                    <span className="text-base font-semibold uppercase text-accent pb-4">
                         Tiempo completo
                     </span>
                     <ExperienceLine experiences={fullTimeExperiences} className="mt-6" />
                 </div>
 
                 <div className="px-4">
-                    <span className="text-base font-semibold uppercase text-blue-400 pb-4">
+                    <span className="text-base font-semibold uppercase text-accent pb-4">
                         Consultor
                     </span>
                     <ExperienceLine experiences={partTimeExperiences} className="mt-6" />

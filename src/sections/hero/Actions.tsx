@@ -13,11 +13,11 @@ export function Actions({ label, icon: Icon, action }: Props) {
             className="
             cursor-pointer
             inline-flex items-center justify-center gap-2
-            rounded-md border border-zinc-700
+            rounded-md border border-border
             px-5 py-3
-            text-sm font-medium text-zinc-200
+            text-sm font-medium text-text-primary
             transition
-            hover:border-blue-600
+            hover:border-border
             hover:backdrop-blur-xs
             hover:text-white
             focus-visible:outline-none

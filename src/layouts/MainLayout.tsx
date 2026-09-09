@@ -4,7 +4,7 @@ import { Footer } from "@components/Footer"
 
 export function MainLayout() {
     return (
-        <div className="relative min-h-screen overflow-clip bg-[#060b18] text-zinc-100">
+        <div className="relative min-h-screen overflow-clip bg-background text-text-primary">
             {/* Fondo de Lineas */}
             <div className="
                 pointer-events-none
@@ -18,7 +18,7 @@ export function MainLayout() {
                 absolute -left-40 -top-40
                 h-[500px] w-[500px]
                 rounded-full
-                bg-blue-600/20
+                bg-accent-soft
                 blur-[140px]"/>
             {/* Glow derecho */}
             <div className="
@@ -26,7 +26,7 @@ export function MainLayout() {
                 absolute right-[-180px] top-[20%]
                 h-[520px] w-[520px]
                 rounded-full
-                bg-blue-500/15
+                bg-accent-soft
                 blur-[160px]"/>
             {/* Glow inferior */}
             <div className="
