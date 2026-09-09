@@ -5,54 +5,41 @@
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
-}
 
-html {
-  scroll-behavior: smooth;
-}
-
-@theme {
-  --color-background: #060b18;
-  --color-surface: #0f172a;
-  --color-surface-soft: rgba(9, 9, 11, 0.45);
-
-  --color-text-primary: #f4f4f5;
-  --color-text-secondary: #a1a1aa;
-
-  --color-border: rgba(59, 130, 246, 0.15);
-
-  --color-accent: #3b82f6;
-  --color-accent-soft: rgba(59, 130, 246, 0.08);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
 }
 
 :root,
 [data-theme="dark"] {
   --background: #060b18;
-
   --surface: #0f172a;
   --surface-soft: rgba(9, 9, 11, 0.45);
-
   --text-primary: #f4f4f5;
   --text-secondary: #a1a1aa;
-
   --border: rgba(59, 130, 246, 0.15);
-
   --accent: #3b82f6;
   --accent-soft: rgba(59, 130, 246, 0.08);
 }
 
 /* LIGHT */
 [data-theme="light"] {
-  --background: #f8fafc;
-
+  --background: #e5e7eb;
   --surface: #ffffff;
-  --surface-soft: rgba(255, 255, 255, 0.75);
-
+  --surface-soft: rgba(248, 250, 252, 0.82);
   --text-primary: #18181b;
   --text-secondary: #52525b;
-
-  --border: rgba(37, 99, 235, 0.15);
-
+  --border: rgba(63, 63, 70, 0.16);
   --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.07);
+  --accent-soft: rgba(37, 99, 235, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
 }
