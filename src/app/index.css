@@ -24,3 +24,35 @@ html {
   --color-accent: #3b82f6;
   --color-accent-soft: rgba(59, 130, 246, 0.08);
 }
+
+:root,
+[data-theme="dark"] {
+  --background: #060b18;
+
+  --surface: #0f172a;
+  --surface-soft: rgba(9, 9, 11, 0.45);
+
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+
+  --border: rgba(59, 130, 246, 0.15);
+
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.08);
+}
+
+/* LIGHT */
+[data-theme="light"] {
+  --background: #f8fafc;
+
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.75);
+
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+
+  --border: rgba(37, 99, 235, 0.15);
+
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.07);
+}

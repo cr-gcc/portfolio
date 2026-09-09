@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiCodeSSlashLine } from "react-icons/ri";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import type { Theme } from "@/types/theme.type";
 
 export function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navLinks = [
         { label: "Home", href: "#home" },
         { label: "Projects", href: "#projects" },
@@ -11,7 +13,22 @@ export function Header() {
         { label: "Stack", href: "#stack" }
     ];
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [theme, setTheme] = useState<Theme>(() => {
+        const storedTheme = localStorage.getItem("theme") as Theme | null;
+        if (storedTheme) return storedTheme;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    });
+
+    useEffect(() => {
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem("theme", theme);
+    }, [theme]);
+
+    function toggleTheme() {
+        setTheme((current) => (current === "dark" ? "light" : "dark"));
+    }
 
     return (
         <header className="relative sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -42,28 +59,16 @@ export function Header() {
                             ))}
                             <li>
                                 <button
-                                    className="
-                                    cursor-pointer
-                                    text-text-secondary
-                                    duration-200
-                                    hover:text-white
-                                    hover:scale-110
-                                    "
-                                    aria-label="Toggle theme"
+                                    className="inline-flex size-10 cursor-pointer items-center justify-center rounded-lg text-text-secondary transition duration-200 hover:bg-accent-soft hover:text-accent"
+                                    type="button"
+                                    onClick={toggleTheme}
+                                    aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
                                 >
-                                    <MdDarkMode />
-                                </button>
-                                <button
-                                    className="
-                                    cursor-pointer
-                                    text-text-secondary
-                                    duration-200
-                                    hover:text-white
-                                    hover:scale-110
-                                    "
-                                    aria-label="Toggle theme"
-                                >
-                                    <MdLightMode />
+                                    {theme === "dark" ? (
+                                        <MdLightMode className="size-5" />
+                                    ) : (
+                                        <MdDarkMode className="size-5" />
+                                    )}
                                 </button>
                             </li>
                         </ul>
