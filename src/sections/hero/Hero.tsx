@@ -1,10 +1,19 @@
 import { ProfileTerminal } from "./ProfileTerminal";
 import { TechBadges } from "./TechBadge";
 import { Actions } from "./Actions";
-import { FaArrowRight, FaGithub, FaDownload } from "react-icons/fa6";
-
+import { FaGithub, FaDownload } from "react-icons/fa6";
 
 export function Hero() {
+    const language = "es";
+    const goTo = (url: string) => window.open(url, "_blank");
+    const downloadCV = () => {
+        if (language === "es") {
+            window.open("/cv/CV_GCC_2026_ES.pdf", "_blank");
+        } else {
+            window.open("/cv/CV_GCC_2026_EN.pdf", "_blank");
+        }
+    };
+
     return (
         <section className="flex min-h-screen items-center py-20 lg:py-16">
             <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
@@ -23,23 +32,17 @@ export function Hero() {
                     <TechBadges />
                     <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
                         <Actions
-                            label="View projects"
-                            icon={FaArrowRight}
-                            action={() => { alert("Coming soon...") }}
-                        />
-                        <Actions
                             label="Github"
                             icon={FaGithub}
-                            action={() => { alert("Coming soon...") }}
+                            action={() => goTo("https://github.com/cr-gcc")}
                         />
                         <Actions
-                            label="Download CV"
+                            label={language === "es" ? "Ver CV" : "View CV"}
                             icon={FaDownload}
-                            action={() => { alert("Coming soon...") }}
+                            action={() => downloadCV()}
                         />
                     </div>
                 </div>
-
                 <div className="w-full lg:pl-8">
                     <ProfileTerminal />
                 </div>

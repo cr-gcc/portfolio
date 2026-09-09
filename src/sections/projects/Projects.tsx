@@ -1,4 +1,3 @@
-import { Link } from "react-router"
 import { projects } from "@/data/projects"
 import { ProjectCard } from "./ProjectCard"
 
@@ -10,12 +9,12 @@ export function Projects() {
                     <span className="text-sm font-semibold uppercase text-accent sm:text-base">
                         Selected work
                     </span>
-                    <Link
-                        to="/projects"
+                    <a
+                        href="https://github.com/cr-gcc" target="_blank"
                         className="w-fit text-sm text-accent transition hover:text-accent sm:text-base"
                     >
                         View all projects
-                    </Link>
+                    </a>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
