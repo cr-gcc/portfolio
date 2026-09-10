@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { RiCodeSSlashLine } from "react-icons/ri";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { useLanguage } from "@/context/LanguageContext";
 import type { Theme } from "@/types/theme.type";
 
 export function Header() {
+    const { language, toggleLanguage, t } = useLanguage();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navLinks = [
-        { label: "Home", href: "#home" },
-        { label: "Projects", href: "#projects" },
-        { label: "Experience", href: "#experience" },
-        { label: "Stack", href: "#stack" }
+        { label: t.navigation.home, href: "#home" },
+        { label: t.navigation.projects, href: "#projects" },
+        { label: t.navigation.experience, href: "#experience" },
+        { label: t.navigation.stack, href: "#stack" }
     ];
-
     const [theme, setTheme] = useState<Theme>(() => {
         const storedTheme = localStorage.getItem("theme") as Theme | null;
         if (storedTheme) return storedTheme;
@@ -47,7 +48,7 @@ export function Header() {
                         "
                     />
                 </a>
-                <div className="flex flex-1 items-center justify-end">
+                <div className="flex flex-1 items-center justify-end gap-4">
                     <nav aria-label="Global" className="hidden md:block">
                         <ul className="flex items-center gap-6 text-sm">
                             {navLinks.map((link) => (
@@ -57,23 +58,33 @@ export function Header() {
                                     </a>
                                 </li>
                             ))}
-                            <li>
-                                <button
-                                    className="inline-flex size-10 cursor-pointer items-center justify-center rounded-lg text-text-secondary transition duration-200 hover:bg-accent-soft hover:text-accent"
-                                    type="button"
-                                    onClick={toggleTheme}
-                                    aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-                                >
-                                    {theme === "dark" ? (
-                                        <MdLightMode className="size-5" />
-                                    ) : (
-                                        <MdDarkMode className="size-5" />
-                                    )}
-                                </button>
-                            </li>
                         </ul>
                     </nav>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center">
+                        <button
+                            className="inline-flex h-10 min-w-10 cursor-pointer items-center justify-center rounded-lg px-2 text-xs font-semibold text-text-secondary transition duration-200 hover:bg-accent-soft hover:text-accent"
+                            type="button"
+                            onClick={toggleLanguage}
+                            aria-label={
+                                language === "en"
+                                    ? "Cambiar idioma a español"
+                                    : "Change language to English"
+                            }
+                        >
+                            {language === "en" ? "ES" : "EN"}
+                        </button>
+                        <button
+                            className="inline-flex size-10 cursor-pointer items-center justify-center rounded-lg text-text-secondary transition duration-200 hover:bg-accent-soft hover:text-accent"
+                            type="button"
+                            onClick={toggleTheme}
+                            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+                        >
+                            {theme === "dark" ? (
+                                <MdLightMode className="size-5" />
+                            ) : (
+                                <MdDarkMode className="size-5" />
+                            )}
+                        </button>
                         <button
                             type="button"
                             onClick={() => setIsMenuOpen((prev) => !prev)}
