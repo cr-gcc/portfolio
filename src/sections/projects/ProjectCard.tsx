@@ -5,6 +5,7 @@ import { GrDocumentUser, GrDocumentPerformance, GrDocumentText } from "react-ico
 import type { IconType } from "@sections/projects/types/projects.types";
 import type { ProjectCardProps } from "@sections/projects/types/projects.types";
 import type { IconType as ReactIconType } from "react-icons";
+import { useLanguage } from "@/context/LanguageContext";
 
 const iconMap: Record<IconType, ReactIconType> = {
     FaHeadphonesAlt,
@@ -16,6 +17,7 @@ const iconMap: Record<IconType, ReactIconType> = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+    const { language } = useLanguage();
     const Icon = iconMap[project.icon];
     return (
         <article
@@ -45,7 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 </h3>
             </div>
             <p className="mt-3 flex-1 text-sm leading-6 text-text-secondary">
-                {project.description}
+                {project.description[language]}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
                 {project.technologies.map((technology) => (

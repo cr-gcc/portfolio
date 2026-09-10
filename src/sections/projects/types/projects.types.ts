@@ -1,3 +1,8 @@
+export type LocalizedText = {
+    en: string;
+    es: string;
+};
+
 export type IconType = "FaHeadphonesAlt" | "IoWalletSharp" | "MdCatchingPokemon" | "GrDocumentUser" | "GrDocumentPerformance" | "GrDocumentText";
 
 export type ProjectType =
@@ -9,7 +14,7 @@ export interface Project {
     slug: string;
     name: string;
     icon: IconType;
-    description: string;
+    description: LocalizedText;
     technologies: string[];
     github: string;
     demo?: string;
