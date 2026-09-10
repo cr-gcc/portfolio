@@ -5,8 +5,8 @@ import { TechItem } from "./TechItem";
 export function TechStack() {
     const { t } = useLanguage();
     return (
-        <section id="stack" className="scroll-mt-20 md:scroll-mt-16 border-t border-border py-12 sm:py-16 lg:py-20">
-            <header className="mb-10">
+        <section id="stack" className="scroll-mt-20 md:scroll-mt-16 border-t border-border py-10 sm:py-16 lg:py-20">
+            <header className="mb-4">
                 <span className="text-base font-semibold uppercase text-accent pb-4">
                     {t.stack.title}
                 </span>
