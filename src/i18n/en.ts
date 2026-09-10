@@ -45,4 +45,15 @@ export const en = {
         subtitle: "Tools and technologies I use to build, integrate and deploy web applications.",
     },
 
+    footer: {
+        title: "Building software with purpose.",
+        description: "Full Stack Developer focused on building maintainable web applications, APIs and integrations that solve real business problems.",
+        contact: "Contact",
+        goContact: "Let's connect!",
+        copyright: "Copyright © 2026 Full Stack Developer. All rights reserved.",
+        links: {
+            linkedin: "Professional profile",
+        }
+    }
+
 } as const;

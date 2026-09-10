@@ -45,8 +45,14 @@ export const es = {
         subtitle: "Herramientas y tecnologías que utilizo para construir, integrar y desplegar aplicaciones web",
     },
 
-    contact: {
-        eyebrow: "Contacto",
-        title: "Hablemos",
-    },
+    footer: {
+        title: "Construyo software con propósito.",
+        description: "Desarrollador Full Stack enfocado en la creación de aplicaciones web, APIs e integraciones mantenibles que resuelven problemas reales del negocio.",
+        contact: "Contacto",
+        goContact: "¡Hablemos!",
+        copyright: "Copyright © 2026 Full Stack Developer. Todos los derechos reservados.",
+        links: {
+            linkedin: "Perfil profesional",
+        }
+    }
 } as const;

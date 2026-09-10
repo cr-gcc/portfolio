@@ -1,8 +1,10 @@
+import { useLanguage } from "@/context/LanguageContext";
 import { RiCodeSSlashLine } from "react-icons/ri";
 import { IoLogoGithub, IoIosArrowUp, IoLogoLinkedin } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 
 export function Footer() {
+    const { t } = useLanguage();
     const goToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
@@ -51,21 +53,19 @@ export function Footer() {
                             />
                         </div>
                         <h2 className="mt-6 text-center text-2xl font-semibold tracking-tight text-text-primary lg:text-left" >
-                            Building software with purpose.
+                            {t.footer.title}
                         </h2>
                         <p className="mx-auto mt-4 max-w-lg text-center leading-7 text-text-secondary lg:mx-0 lg:text-left">
-                            Full Stack Developer focused on building maintainable web
-                            applications, APIs and integrations that solve real business
-                            problems.
+                            {t.footer.description}
                         </p>
                     </div>
                     {/* Contact */}
                     <div>
                         <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-accent lg:text-left" >
-                            Contact
+                            {t.footer.contact}
                         </p>
                         <h3 className="mt-3 text-center text-2xl font-semibold text-text-primary lg:text-left" >
-                            Let&apos;s connect
+                            {t.footer.goContact}
                         </h3>
                         <div className="mt-6 space-y-4">
                             <a href="mailto:cris.gcc@outlook.com" className="group flex items-center gap-4
@@ -91,7 +91,7 @@ export function Footer() {
                                 </div>
                                 <div>
                                     <p className="text-xs uppercase tracking-wider text-text-primary0">LinkedIn</p>
-                                    <p className="text-sm font-medium text-text-secondary group-hover:text-white">Professional profile</p>
+                                    <p className="text-sm font-medium text-text-secondary group-hover:text-white">{t.footer.links.linkedin}</p>
                                 </div>
                             </a>
                             <a href="https://github.com/cr-gcc"
