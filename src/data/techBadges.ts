@@ -10,12 +10,33 @@ import type { IconType } from "react-icons";
 type TechBadge = {
     name: string;
     icon: IconType;
+    color: string;
 };
 
 export const techBadgesBasic: TechBadge[] = [
-    { name: "React", icon: SiReact },
-    { name: "Vue", icon: SiVuedotjs },
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "Laravel", icon: SiLaravel },
-    { name: "Python", icon: SiPython },
+    {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+    },
+    {
+        name: "Vue",
+        icon: SiVuedotjs,
+        color: "#42B883",
+    },
+    {
+        name: "TypeScript",
+        icon: SiTypescript,
+        color: "#3178C6",
+    },
+    {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+    },
+    {
+        name: "Python",
+        icon: SiPython,
+        color: "#3776AB",
+    },
 ];
