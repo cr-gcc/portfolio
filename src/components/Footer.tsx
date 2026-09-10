@@ -122,12 +122,12 @@ export function Footer() {
                             Cris GC
                         </span>
                         <span className="mx-2 text-accent">•</span>
-                        Built with{" "}
+                        {t.footer.copy1}{" "}
                         <span className="text-text-secondary">React</span>
                         {" + "}
                         <span className="text-text-secondary">TypeScript</span>
                         <span className="mx-2 text-accent">•</span>
-                        Fueled by <span title="Coffee">☕</span> and <span title="Heart">❤️</span>
+                        {t.footer.copy2}
                     </p>
                 </div>
             </div>

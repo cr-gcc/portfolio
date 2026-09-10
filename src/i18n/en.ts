@@ -50,10 +50,11 @@ export const en = {
         description: "Full Stack Developer focused on building maintainable web applications, APIs and integrations that solve real business problems.",
         contact: "Contact",
         goContact: "Let's connect!",
-        copyright: "Copyright © 2026 Full Stack Developer. All rights reserved.",
         links: {
             linkedin: "Professional profile",
-        }
+        },
+        copy1: "Built with",
+        copy2: "Fueled by ☕ and ❤️",
     }
 
 } as const;
