@@ -23,7 +23,7 @@ export const es = {
             file_experience: "experiencia",
             file_availability: "disponibilidad",
             role: "Desarrollador Full Stack",
-            location: "Ciudad de Mexico, Mexico",
+            location: "Ciudad de México, México",
             focus: "Construyo aplicaciones web, APIs y software orientado a negocios y datos",
             experience: "6+ Años",
             availability: "Disponible para nuevas oportunidades"
@@ -38,6 +38,10 @@ export const es = {
     experience: {
         title: "Experiencia profesional",
         subtitle: "Empresas y proyectos en los que he participado",
+        type: {
+            fullTime: "Tiempo completo",
+            partTime: "Consultor"
+        }
     },
 
     stack: {

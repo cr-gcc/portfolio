@@ -80,7 +80,7 @@ export function Footer() {
                                     <p className="text-sm font-medium text-text-secondary group-hover:text-white">cris.gcc@outlook.com</p>
                                 </div>
                             </a>
-                            <a href="https://www.linkedin.com/"
+                            <a href="https://www.linkedin.com/in/cristobal-gutierrez-chavez/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="group flex items-center gap-4 rounded-lg border border-border bg-surface-soft px-4 py-3

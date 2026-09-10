@@ -37,7 +37,11 @@ export const en = {
 
     experience: {
         title: "Experience",
-        subtitle: "Professional Journey",
+        subtitle: "Companies and projects in which it participates",
+        type: {
+            fullTime: "Full-time",
+            partTime: "Consultant"
+        }
     },
 
     stack: {
