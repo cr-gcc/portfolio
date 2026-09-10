@@ -36,12 +36,13 @@ export const es = {
     },
 
     experience: {
-        title: "Trayectoria profesional",
+        title: "Experiencia profesional",
+        subtitle: "Empresas y proyectos en los que he participado",
     },
 
     stack: {
-        eyebrow: "Stack tecnológico",
-        title: "Tecnologías con las que trabajo",
+        title: "Tecnologías",
+        subtitle: "Herramientas y tecnologías que utilizo para construir, integrar y desplegar aplicaciones web",
     },
 
     contact: {

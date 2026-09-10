@@ -1,16 +1,17 @@
+import { useLanguage } from "@/context/LanguageContext"
 import { technologyGroups } from "@/data/technologyGroups";
 import { TechItem } from "./TechItem";
 
 export function TechStack() {
+    const { t } = useLanguage();
     return (
         <section id="stack" className="scroll-mt-20 md:scroll-mt-16 border-t border-border py-12 sm:py-16 lg:py-20">
             <header className="mb-10">
                 <span className="text-base font-semibold uppercase text-accent pb-4">
-                    Tech Stack
+                    {t.stack.title}
                 </span>
-                <p className="mt-3 max-w-2xl text-text-secondary">
-                    Tools and technologies I use to build, integrate and deploy
-                    web applications.
+                <p className="mt-3 text-text-secondary">
+                    {t.stack.subtitle}
                 </p>
             </header>
             <div className="overflow-hidden rounded-2xl border border-border bg-surface-soft backdrop-blur-md">

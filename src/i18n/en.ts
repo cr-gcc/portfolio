@@ -36,17 +36,13 @@ export const en = {
     },
 
     experience: {
-        eyebrow: "Experience",
-        title: "Professional Journey",
+        title: "Experience",
+        subtitle: "Professional Journey",
     },
 
     stack: {
-        eyebrow: "Tech Stack",
-        title: "Technologies I work with",
+        title: "Tech Stack",
+        subtitle: "Tools and technologies I use to build, integrate and deploy web applications.",
     },
 
-    contact: {
-        eyebrow: "Contact",
-        title: "Let's connect",
-    },
 } as const;
