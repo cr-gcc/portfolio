@@ -1,75 +1,73 @@
-# React + TypeScript + Vite
+# Cris GC - Personal Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Currently, two official plugins are available:
+Welcome to the repository of my personal portfolio! This project is a showcase of my skills as a Full Stack Developer, featuring my professional experience, projects, and the technologies I use to build robust web applications and APIs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Modern Tech Stack**: Built from the ground up using **React 19**, **TypeScript**, and **Vite** for blazing fast performance.
+- **Styling**: Sleek, responsive, and maintainable UI crafted with **Tailwind CSS v4**. Includes glassmorphism effects and smooth transitions.
+- **Internationalization (i18n)**: Full support for both **English** and **Spanish**. The language state is managed via a custom React Context and persists user preference.
+- **Data-Driven Architecture**: Content like projects, experience, and tech stack are decoupled from the UI and managed in structured data files, making it easy to update and scale.
+- **Custom UI Components**: Built entirely with custom components without relying on heavy UI libraries.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗️ Architecture & Sections
 
-## Expanding the ESLint configuration
+The portfolio is structured into distinct, modular sections:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Hero**: Introduction, title, and quick terminal-style presentation.
+- **Projects**: A curated list of highlighted frontend and backend projects, featuring live demos and GitHub links.
+- **Experience**: A timeline showcasing my professional journey, roles, and key responsibilities.
+- **Tech Stack**: A categorized grid of the tools and technologies I use daily.
+- **Contact / Footer**: Quick links to connect with me professionally (LinkedIn, GitHub, Email).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To run this project locally, follow these steps:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
 
-```
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/cr-gcc/portfolio.git
+   cd portfolio
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 🛠️ Built With
+
+- [React](https://react.dev/) - UI Library
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [React Icons](https://react-icons.github.io/react-icons/) - Icon library
+
+## 👨‍💻 About Me
+
+I am a **Full Stack Developer** focused on building maintainable web applications, APIs, and integrations that solve real business problems. I enjoy taking ideas and turning them into functional, well-designed software.
+
+---
+*Built with React + TypeScript. Fueled by ☕ and ❤️.*
