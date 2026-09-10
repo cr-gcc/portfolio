@@ -16,7 +16,7 @@ export function Hero() {
     };
 
     return (
-        <section className="flex min-h-screen items-center py-20 lg:py-16">
+        <section id="hero" className="flex min-h-screen items-center py-20 lg:py-16">
             <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
                 <div className="space-y-5 sm:space-y-7">
                     <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent sm:text-base sm:tracking-[0.22em]">
