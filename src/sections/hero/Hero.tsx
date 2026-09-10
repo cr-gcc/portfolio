@@ -1,10 +1,11 @@
+import { useLanguage } from "@/context/LanguageContext";
 import { ProfileTerminal } from "./ProfileTerminal";
 import { TechBadges } from "./TechBadge";
 import { Actions } from "./Actions";
 import { FaGithub, FaDownload } from "react-icons/fa6";
 
 export function Hero() {
-    const language = "es";
+    const { language, t } = useLanguage();
     const goTo = (url: string) => window.open(url, "_blank");
     const downloadCV = () => {
         if (language === "es") {
@@ -19,25 +20,23 @@ export function Hero() {
             <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
                 <div className="space-y-5 sm:space-y-7">
                     <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent sm:text-base sm:tracking-[0.22em]">
-                        Full Stack Developer
+                        {t.hero.role}
                     </p>
                     <h1 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight text-text-primary sm:text-4xl md:text-5xl lg:text-6xl">
-                        I build web applications, APIs and business-oriented software.
+                        {t.hero.title}
                     </h1>
                     <p className="max-w-2xl text-sm leading-6 text-text-secondary sm:text-base sm:leading-7 md:text-lg">
-                        Transforming business needs into scalable solutions.
-                        Specialized in building full-stack applications,
-                        integrations and data-driven systems.
+                        {t.hero.subtitle}
                     </p>
                     <TechBadges />
                     <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
                         <Actions
-                            label="Github"
+                            label={t.hero.actions.github}
                             icon={FaGithub}
                             action={() => goTo("https://github.com/cr-gcc")}
                         />
                         <Actions
-                            label={language === "es" ? "Ver CV" : "View CV"}
+                            label={t.hero.actions.cv}
                             icon={FaDownload}
                             action={() => downloadCV()}
                         />
