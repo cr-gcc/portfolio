@@ -1,10 +1,15 @@
 export type TypeExperience = "Full-time" | "Part-time";
 
+export type LocalizedText = {
+    es: string;
+    en: string;
+};
+
 export interface Experience {
     company: string;
-    rangeDate: string;
-    role: string;
-    description: string;
+    rangeDate: LocalizedText;
+    role: LocalizedText;
+    description: LocalizedText;
     type: TypeExperience;
 }
 
