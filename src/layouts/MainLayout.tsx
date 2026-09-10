@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { Outlet } from 'react-router'
 import { Header } from "@components/Header"
 import { Footer } from "@components/Footer"
@@ -5,6 +6,7 @@ import { Footer } from "@components/Footer"
 export function MainLayout() {
     return (
         <div className="relative min-h-screen overflow-clip bg-background text-text-primary">
+            <Analytics />
             {/* Fondo de Lineas */}
             <div className="
                 pointer-events-none
